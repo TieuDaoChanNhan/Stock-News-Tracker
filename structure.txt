@@ -1,0 +1,105 @@
+Folder PATH listing
+Volume serial number is 49F3-C340
+D:\COMPUTER SCIENCE\VNPT INTERNSHIP\STOCK_NEWS_TRACKING
+¦   structure.txt
+¦   
++---backend
+    ¦   .env
+    ¦   debug_api.py
+    ¦   local_news_tracker.db
+    ¦   main.py
+    ¦   requirements.txt
+    ¦   run_crawler_to_api.py
+    ¦   setup_sample_sources.py
+    ¦   setup_watchlist.py
+    ¦   
+    +---app
+    ¦   ¦   database.py
+    ¦   ¦   scheduler_script.py
+    ¦   ¦   __init__.py
+    ¦   ¦   
+    ¦   +---api
+    ¦   ¦   ¦   __init__.py
+    ¦   ¦   ¦   
+    ¦   ¦   +---endpoints
+    ¦   ¦   ¦   ¦   ai_analysis_endpoints.py
+    ¦   ¦   ¦   ¦   article_endpoints.py
+    ¦   ¦   ¦   ¦   crawl_source_endpoints.py
+    ¦   ¦   ¦   ¦   watchlist_endpoints.py
+    ¦   ¦   ¦   ¦   __init__.py
+    ¦   ¦   ¦   ¦   
+    ¦   ¦   ¦   +---__pycache__
+    ¦   ¦   ¦           ai_analysis_endpoints.cpython-310.pyc
+    ¦   ¦   ¦           article_endpoints.cpython-310.pyc
+    ¦   ¦   ¦           crawl_source_endpoints.cpython-310.pyc
+    ¦   ¦   ¦           watchlist_endpoints.cpython-310.pyc
+    ¦   ¦   ¦           __init__.cpython-310.pyc
+    ¦   ¦   ¦           
+    ¦   ¦   +---__pycache__
+    ¦   ¦           __init__.cpython-310.pyc
+    ¦   ¦           
+    ¦   +---crud
+    ¦   ¦   ¦   ai_analysis_crud.py
+    ¦   ¦   ¦   article_crud.py
+    ¦   ¦   ¦   crawl_source_crud.py
+    ¦   ¦   ¦   watchlist_crud.py
+    ¦   ¦   ¦   __init__.py
+    ¦   ¦   ¦   
+    ¦   ¦   +---__pycache__
+    ¦   ¦           ai_analysis_crud.cpython-310.pyc
+    ¦   ¦           article_crud.cpython-310.pyc
+    ¦   ¦           crawl_source_crud.cpython-310.pyc
+    ¦   ¦           watchlist_crud.cpython-310.pyc
+    ¦   ¦           __init__.cpython-310.pyc
+    ¦   ¦           
+    ¦   +---models
+    ¦   ¦   ¦   ai_analysis_model.py
+    ¦   ¦   ¦   article_model.py
+    ¦   ¦   ¦   crawl_source_model.py
+    ¦   ¦   ¦   watchlist_model.py
+    ¦   ¦   ¦   __init__.py
+    ¦   ¦   ¦   
+    ¦   ¦   +---__pycache__
+    ¦   ¦           ai_analysis_model.cpython-310.pyc
+    ¦   ¦           ai_insights_model.cpython-310.pyc
+    ¦   ¦           article_model.cpython-310.pyc
+    ¦   ¦           crawl_source_model.cpython-310.pyc
+    ¦   ¦           watchlist_model.cpython-310.pyc
+    ¦   ¦           __init__.cpython-310.pyc
+    ¦   ¦           
+    ¦   +---schemas
+    ¦   ¦   ¦   ai_analysis_schema.py
+    ¦   ¦   ¦   article_schema.py
+    ¦   ¦   ¦   crawl_source_schema.py
+    ¦   ¦   ¦   watchlist_schema.py
+    ¦   ¦   ¦   __init__.py
+    ¦   ¦   ¦   
+    ¦   ¦   +---__pycache__
+    ¦   ¦           ai_analysis_schema.cpython-310.pyc
+    ¦   ¦           article_schema.cpython-310.pyc
+    ¦   ¦           crawl_source_schema.cpython-310.pyc
+    ¦   ¦           watchlist_schema.cpython-310.pyc
+    ¦   ¦           __init__.cpython-310.pyc
+    ¦   ¦           
+    ¦   +---services
+    ¦   ¦   ¦   gemini_service.py
+    ¦   ¦   ¦   generic_crawler.py
+    ¦   ¦   ¦   notification_service.py
+    ¦   ¦   ¦   web_scrapers.py
+    ¦   ¦   ¦   __init__.py
+    ¦   ¦   ¦   
+    ¦   ¦   +---__pycache__
+    ¦   ¦           ai_summarization_service.cpython-310.pyc
+    ¦   ¦           gemini_service.cpython-310.pyc
+    ¦   ¦           generic_crawler.cpython-310.pyc
+    ¦   ¦           notification_service.cpython-310.pyc
+    ¦   ¦           __init__.cpython-310.pyc
+    ¦   ¦           
+    ¦   +---__pycache__
+    ¦           database.cpython-310.pyc
+    ¦           __init__.cpython-310.pyc
+    ¦           
+    +---__pycache__
+            main.cpython-310.pyc
+            web_scrapers.cpython-310.pyc
+            
