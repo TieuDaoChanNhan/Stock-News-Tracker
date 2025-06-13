@@ -74,7 +74,7 @@ def fetch_and_process_all_active_sources():
                 summary_selector=source.get('summary_selector'),
                 date_selector=source.get('date_selector'),
                 source_name=source['name'],
-                max_articles=1
+                max_articles=2
             )
             
             if not scraped_articles:
