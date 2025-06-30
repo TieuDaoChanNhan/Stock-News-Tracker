@@ -15,6 +15,9 @@ sys.path.insert(0, backend_dir)
 
 # Bây giờ có thể import bình thường
 from app.services.generic_crawler import scrape_news_from_website
+from setup_sample_sources import main as source_setup
+from setup_watchlist import main as watchlist_setup
+from app.services.notification_service import test_telegram_connection
 
 API_BASE_URL = "http://127.0.0.1:8000/api/v1"
 
@@ -117,9 +120,14 @@ def check_api_connection():
         print(f"❌ Không thể kết nối API: {e}")
         return False
 def main():
+
     print("=" * 80)
     print("🤖 STOCK NEWS TRACKER SCHEDULER (with Gemini AI)")
     print("=" * 80)
+
+    source_setup()
+    watchlist_setup()
+    test_telegram_connection()
     
     if not check_api_connection():
         return
