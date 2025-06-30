@@ -40,7 +40,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 async def startup_event():
     print("🚀 Khởi động Stock News Tracker API...")
     # Import tất cả models
-    from app.models import article_model, crawl_source_model, watchlist_model, ai_analysis_model  # ← Thêm ai_analysis_model
+    from app.models import article_model, crawl_source_model, watchlist_model, ai_analysis_model
     database.init_db()
     print("✅ Database đã được khởi tạo!")
 

@@ -1,3 +1,4 @@
+# app/scheduler_script.py
 import requests
 import json
 import time
@@ -7,11 +8,13 @@ from typing import List, Dict, Optional
 import sys
 import os
 
-# Thêm thư mục app vào Python path
-sys.path.append(os.path.dirname(__file__))
+# Thêm thư mục backend vào Python path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+backend_dir = os.path.dirname(current_dir)
+sys.path.insert(0, backend_dir)
 
-# Import crawler (KHÔNG import AI cũ nữa)
-from services.generic_crawler import scrape_news_from_website
+# Bây giờ có thể import bình thường
+from app.services.generic_crawler import scrape_news_from_website
 
 API_BASE_URL = "http://127.0.0.1:8000/api/v1"
 
@@ -113,7 +116,6 @@ def check_api_connection():
     except Exception as e:
         print(f"❌ Không thể kết nối API: {e}")
         return False
-
 def main():
     print("=" * 80)
     print("🤖 STOCK NEWS TRACKER SCHEDULER (with Gemini AI)")

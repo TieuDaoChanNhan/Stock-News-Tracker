@@ -16,8 +16,8 @@ sample_sources = [
         "is_active": True
     },
     {
-        "name": "VnExpress - Chính sách kinh tế",
-        "url": "https://vnexpress.net/chu-de/chinh-sach-kinh-te-1073",
+        "name": "VnExpress - Chính trị",
+        "url": "https://vnexpress.net/thoi-su/chinh-tri",
         "article_container_selector": ".item-news",
         "title_selector": "h3 a, h2 a",
         "link_selector": "h3 a, h2 a",
@@ -36,8 +36,8 @@ sample_sources = [
         "is_active": True
     },
     {
-        "name": "VnExpress - Kinh doanh quốc tế",
-        "url": "https://vnexpress.net/kinh-doanh/quoc-te",
+        "name": "VnExpress - Kinh doanh",
+        "url": "https://vnexpress.net/kinh-doanh",
         "article_container_selector": ".item-news",
         "title_selector": "h3 a, h2 a",
         "link_selector": "h3 a, h2 a",
@@ -76,8 +76,18 @@ sample_sources = [
         "is_active": True
     },
     {
-        "name": "VnExpress - Chính sách tiền tệ",
-        "url": "https://vnexpress.net/tag/chinh-sach-tien-te-1044604",
+        "name": "VnExpress - Khoa học công nghệ",
+        "url": "https://vnexpress.net/khoa-hoc-cong-nghe",
+        "article_container_selector": ".item-news",
+        "title_selector": "h3 a, h2 a",
+        "link_selector": "h3 a, h2 a",
+        "summary_selector": ".description",
+        "date_selector": ".time",
+        "is_active": True
+    },
+    {
+        "name": "VnExpress - Trang chủ",
+        "url": "https://vnexpress.net/",
         "article_container_selector": ".item-news",
         "title_selector": "h3 a, h2 a",
         "link_selector": "h3 a, h2 a",
