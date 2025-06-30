@@ -11,7 +11,6 @@ class ArticleAIAnalysis(Base):
     category = Column(String, nullable=True)  # 'Địa chính trị', 'Chính sách tiền tệ', etc.
     sentiment_score = Column(Float, nullable=True)  # -1.0 to 1.0
     impact_score = Column(Float, nullable=True)  # 0.0 to 1.0
-    confidence_score = Column(Float, nullable=True)  # 0.0 to 1.0
     keywords_extracted = Column(Text, nullable=True)  # JSON string của keywords
     analysis_metadata = Column(Text, nullable=True)  # JSON string chứa thông tin phân tích
     created_at = Column(DateTime, default=datetime.utcnow)
