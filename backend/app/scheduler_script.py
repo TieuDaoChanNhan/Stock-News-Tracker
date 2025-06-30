@@ -17,7 +17,9 @@ sys.path.insert(0, backend_dir)
 from app.services.generic_crawler import scrape_news_from_website
 from setup_sample_sources import main as source_setup
 from setup_watchlist import main as watchlist_setup
+from setup_company import main as company_setup
 from app.services.notification_service import test_telegram_connection
+from app.services.financial_api_service import fetch_all_active_company_metrics
 
 API_BASE_URL = "http://127.0.0.1:8000/api/v1"
 
@@ -119,6 +121,37 @@ def check_api_connection():
     except Exception as e:
         print(f"❌ Không thể kết nối API: {e}")
         return False
+
+def fetch_company_metrics():
+    """
+    🎯 Function được gọi bởi scheduler
+    Gọi đến services/financial_api_service.py
+    """
+    print(f"\n📊 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - SCHEDULER: Gọi Financial API Service...")
+    
+    try:
+        # 🔥 GỌI SERVICE THAY VÌ SETUP_COMPANY
+        summary = fetch_all_active_company_metrics()
+        
+        if summary['success_count'] > 0:
+            print(f"✅ SCHEDULER: Thành công fetch metrics cho {summary['success_count']} companies")
+            
+            # Gửi notification nếu muốn
+            # if summary['success_count'] >= 5:
+            #     notification_message = f"📊 Company Metrics Update\n✅ Successfully fetched metrics for {summary['success_count']} companies\n🔧 API usage: {summary['api_requests_used']}/{summary['api_limit']}"
+                 # notification_service.send_telegram_message_sync(notification_message)
+        
+        if summary['error_count'] > 0:
+            print(f"⚠️ SCHEDULER: {summary['error_count']} companies có lỗi")
+            
+    except Exception as e:
+        print(f"❌ SCHEDULER: Lỗi khi gọi Financial API Service: {e}")
+
+def gather_data():
+    fetch_company_metrics()
+    fetch_and_process_all_active_sources()
+
+
 def main():
 
     print("=" * 80)
@@ -127,20 +160,21 @@ def main():
 
     source_setup()
     watchlist_setup()
+    company_setup()
     test_telegram_connection()
     
     if not check_api_connection():
         return
         
     # Lập lịch
-    schedule.every(15).minutes.do(fetch_and_process_all_active_sources)
+    schedule.every(15).minutes.do(gather_data)
     
     print("⏰ Scheduler đã khởi động. Lịch: Mỗi 15 phút.")
     print("🤖 AI phân tích sẽ được thực hiện tự động trong backend.")
     
     # Chạy ngay lần đầu để test
     print("\n🚀 Chạy chu kỳ đầu tiên ngay bây giờ...")
-    fetch_and_process_all_active_sources()
+    gather_data()
     
     # Vòng lặp chính
     try:

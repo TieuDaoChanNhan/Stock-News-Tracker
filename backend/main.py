@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app import database
-from app.api.endpoints import article_endpoints, crawl_source_endpoints, watchlist_endpoints, ai_analysis_endpoints
+from app.api.endpoints import article_endpoints, crawl_source_endpoints, watchlist_endpoints, ai_analysis_endpoints, company_endpoints
 
 # Cấu hình logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -40,7 +40,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 async def startup_event():
     print("🚀 Khởi động Stock News Tracker API...")
     # Import tất cả models
-    from app.models import article_model, crawl_source_model, watchlist_model, ai_analysis_model
+    from app.models import article_model, crawl_source_model, watchlist_model, ai_analysis_model, company_model
     database.init_db()
     print("✅ Database đã được khởi tạo!")
 
@@ -49,6 +49,7 @@ app.include_router(article_endpoints.router)
 app.include_router(crawl_source_endpoints.router)
 app.include_router(watchlist_endpoints.router)  # ← MỚI
 app.include_router(ai_analysis_endpoints.router)
+app.include_router(company_endpoints.router)
 
 # Root endpoint
 @app.get("/")
