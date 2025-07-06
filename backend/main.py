@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 
 from app import database
 from app.api.endpoints import article_endpoints, crawl_source_endpoints, watchlist_endpoints, ai_analysis_endpoints, company_endpoints
+from app.scheduler_script import main as start_scheduler
 
 # Cấu hình logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -76,3 +77,5 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+    start_scheduler()
+

@@ -28,31 +28,31 @@ def setup_popular_companies() -> List[str]:
         {"symbol": "NVDA", "company_name": "NVIDIA Corporation", "sector": "Technology", "industry": "Semiconductors"},
         {"symbol": "META", "company_name": "Meta Platforms Inc.", "sector": "Technology", "industry": "Social Media"},
         
-        # Financial Services
-        {"symbol": "JPM", "company_name": "JPMorgan Chase & Co.", "sector": "Financial", "industry": "Banking"},
-        {"symbol": "BAC", "company_name": "Bank of America Corp", "sector": "Financial", "industry": "Banking"},
-        {"symbol": "WFC", "company_name": "Wells Fargo & Company", "sector": "Financial", "industry": "Banking"},
+        # # Financial Services
+        # {"symbol": "JPM", "company_name": "JPMorgan Chase & Co.", "sector": "Financial", "industry": "Banking"},
+        # {"symbol": "BAC", "company_name": "Bank of America Corp", "sector": "Financial", "industry": "Banking"},
+        # {"symbol": "WFC", "company_name": "Wells Fargo & Company", "sector": "Financial", "industry": "Banking"},
         
-        # Healthcare
-        {"symbol": "JNJ", "company_name": "Johnson & Johnson", "sector": "Healthcare", "industry": "Pharmaceuticals"},
-        {"symbol": "PFE", "company_name": "Pfizer Inc.", "sector": "Healthcare", "industry": "Pharmaceuticals"},
-        {"symbol": "UNH", "company_name": "UnitedHealth Group Inc.", "sector": "Healthcare", "industry": "Health Insurance"},
+        # # Healthcare
+        # {"symbol": "JNJ", "company_name": "Johnson & Johnson", "sector": "Healthcare", "industry": "Pharmaceuticals"},
+        # {"symbol": "PFE", "company_name": "Pfizer Inc.", "sector": "Healthcare", "industry": "Pharmaceuticals"},
+        # {"symbol": "UNH", "company_name": "UnitedHealth Group Inc.", "sector": "Healthcare", "industry": "Health Insurance"},
         
-        # Consumer Goods
-        {"symbol": "KO", "company_name": "The Coca-Cola Company", "sector": "Consumer", "industry": "Beverages"},
-        {"symbol": "PG", "company_name": "Procter & Gamble Co", "sector": "Consumer", "industry": "Consumer Goods"},
-        {"symbol": "DIS", "company_name": "The Walt Disney Company", "sector": "Entertainment", "industry": "Media"},
+        # # Consumer Goods
+        # {"symbol": "KO", "company_name": "The Coca-Cola Company", "sector": "Consumer", "industry": "Beverages"},
+        # {"symbol": "PG", "company_name": "Procter & Gamble Co", "sector": "Consumer", "industry": "Consumer Goods"},
+        # {"symbol": "DIS", "company_name": "The Walt Disney Company", "sector": "Entertainment", "industry": "Media"},
         
-        # Energy
-        {"symbol": "XOM", "company_name": "Exxon Mobil Corporation", "sector": "Energy", "industry": "Oil & Gas"},
-        {"symbol": "CVX", "company_name": "Chevron Corporation", "sector": "Energy", "industry": "Oil & Gas"},
+        # # Energy
+        # {"symbol": "XOM", "company_name": "Exxon Mobil Corporation", "sector": "Energy", "industry": "Oil & Gas"},
+        # {"symbol": "CVX", "company_name": "Chevron Corporation", "sector": "Energy", "industry": "Oil & Gas"},
         
-        # Industrial
-        {"symbol": "GE", "company_name": "General Electric Company", "sector": "Industrial", "industry": "Conglomerates"},
+        # # Industrial
+        # {"symbol": "GE", "company_name": "General Electric Company", "sector": "Industrial", "industry": "Conglomerates"},
         
-        # Retail
-        {"symbol": "WMT", "company_name": "Walmart Inc.", "sector": "Retail", "industry": "Discount Stores"},
-        {"symbol": "AMZN", "company_name": "Amazon.com Inc.", "sector": "Retail", "industry": "E-commerce"},
+        # # Retail
+        # {"symbol": "WMT", "company_name": "Walmart Inc.", "sector": "Retail", "industry": "Discount Stores"},
+        # {"symbol": "AMZN", "company_name": "Amazon.com Inc.", "sector": "Retail", "industry": "E-commerce"},
     ]
     
     db = SessionLocal()

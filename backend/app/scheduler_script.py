@@ -167,7 +167,7 @@ def main():
         return
         
     # Lập lịch
-    schedule.every(15).minutes.do(gather_data)
+    schedule.every(1).hours.do(gather_data)
     
     print("⏰ Scheduler đã khởi động. Lịch: Mỗi 15 phút.")
     print("🤖 AI phân tích sẽ được thực hiện tự động trong backend.")
