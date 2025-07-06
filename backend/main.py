@@ -17,8 +17,10 @@ logger = logging.getLogger(__name__)
 # Tạo FastAPI app
 app = FastAPI(
     title="Stock News Tracker API",
+    root_path="/",  # optional
     version="0.3.0",
-    description="API để quản lý tin tức tài chính, nguồn crawler và watchlist"
+    description="API để quản lý tin tức tài chính, nguồn crawler và watchlist",
+    redirect_slashes=True,  # <- thêm dòng này
 )
 
 # ✅ SỬA: CORS Configuration chi tiết cho Flutter web
