@@ -10,3 +10,4 @@ schedule==1.2.0
 playwright==1.40.0
 google-generativeai
 python-dotenv
+python-telegram-bot==20.7
