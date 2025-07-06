@@ -85,16 +85,16 @@ sample_sources = [
         "date_selector": ".time",
         "is_active": True
     },
-    {
-        "name": "VnExpress - Trang chủ",
-        "url": "https://vnexpress.net/",
-        "article_container_selector": ".item-news",
-        "title_selector": "h3 a, h2 a",
-        "link_selector": "h3 a, h2 a",
-        "summary_selector": ".description",
-        "date_selector": ".time",
-        "is_active": True
-    },
+    # {
+    #     "name": "VnExpress - Trang chủ",
+    #     "url": "https://vnexpress.net/",
+    #     "article_container_selector": ".item-news",
+    #     "title_selector": "h3 a, h2 a",
+    #     "link_selector": "h3 a, h2 a",
+    #     "summary_selector": ".description",
+    #     "date_selector": ".time",
+    #     "is_active": True
+    # },
     # {
     #     "name": "CafeF - Trang chủ",
     #     "url": "https://cafef.vn/",
