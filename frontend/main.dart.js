@@ -94878,7 +94878,7 @@ a_s(a){var s=0,r=A.G(t.fT),q,p=2,o=[],n=this,m,l,k,j,i
 var $async$t1=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/ai-analysis//article/"+a,t.z),$async$t1)
+return A.B(n.a.mo("/ai-analysis//article/"+a+"/",t.z),$async$t1)
 case 7:m=c
 if(m.c===200){k=A.aH0(m.a)
 q=k
@@ -94910,7 +94910,7 @@ var $async$ko=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 j=t.z
 s=7
-return A.B(n.a.pF("/ai-analysis//high-impact",A.av(["min_impact",a],t.N,j),j),$async$ko)
+return A.B(n.a.pF("/ai-analysis//high-impact/",A.av(["min_impact",a],t.N,j),j),$async$ko)
 case 7:m=c
 if(m.c===200){l=m.a
 j=J.fk(l,new A.a1O(),t.cY)
@@ -94939,7 +94939,7 @@ a_w(a){var s=0,r=A.G(t.i7),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$le=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/ai-analysis//category/"+a,t.z),$async$le)
+return A.B(n.a.mo("/ai-analysis//category/"+a+"/",t.z),$async$le)
 case 7:m=c
 if(m.c===200){l=m.a
 j=J.fk(l,new A.a1N(),t.cY)
@@ -95005,7 +95005,7 @@ apC(a){var s=0,r=A.G(t.HT),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AR=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/articles//"+a,t.z),$async$AR)
+return A.B(n.a.mo("/articles//"+a+"/",t.z),$async$AR)
 case 7:m=c
 if(m.c===200){j=A.aCS(m.a)
 q=j
@@ -95092,7 +95092,7 @@ apF(a){var s=0,r=A.G(t.OI),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AV=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/companies//"+a,t.z),$async$AV)
+return A.B(n.a.mo("/companies//"+a+"/",t.z),$async$AV)
 case 7:m=c
 if(m.c===200){j=A.aD8(m.a)
 q=j
@@ -95120,7 +95120,7 @@ var $async$AW=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 i=t.z
 s=7
-return A.B(n.a.pF("/companies//"+a+"/metrics",A.av(["limit",b],t.N,i),i),$async$AW)
+return A.B(n.a.pF("/companies//"+a+"/metrics/",A.av(["limit",b],t.N,i),i),$async$AW)
 case 7:m=d
 if(m.c===200){l=m.a
 i=J.fk(l,new A.a5k(),t.YP)
@@ -95149,7 +95149,7 @@ apI(a){var s=0,r=A.G(t.YP),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AZ=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/companies//"+a+"/metrics/latest",t.z),$async$AZ)
+return A.B(n.a.mo("/companies//"+a+"/metrics/latest/",t.z),$async$AZ)
 case 7:m=c
 if(m.c===200){j=A.aHG(m.a)
 q=j
@@ -95176,7 +95176,7 @@ apJ(a){var s=0,r=A.G(t.a),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$hy=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.auq("/companies//"+a+"/fetch-metrics",t.z),$async$hy)
+return A.B(n.a.auq("/companies//"+a+"/fetch-metrics/",t.z),$async$hy)
 case 7:m=c
 if(m.c===200){j=m.a
 q=j
@@ -95229,7 +95229,7 @@ awe(a,b){var s=0,r=A.G(t.OI),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$lb=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.Zf("/companies//"+a,b,t.z),$async$lb)
+return A.B(n.a.Zf("/companies//"+a+"/",b,t.z),$async$lb)
 case 7:m=d
 if(m.c===200){j=A.aD8(m.a)
 q=j
@@ -95380,7 +95380,7 @@ awh(a,b){var s=0,r=A.G(t.Li),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$lc=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.Zf("/crawl-sources//"+a,b,t.z),$async$lc)
+return A.B(n.a.Zf("/crawl-sources//"+a+"/",b,t.z),$async$lc)
 case 7:m=d
 if(m.c===200){j=A.aHL(m.a)
 q=j
