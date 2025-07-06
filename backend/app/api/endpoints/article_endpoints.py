@@ -40,7 +40,7 @@ async def read_articles(
             detail=f"Lỗi khi lấy danh sách articles: {str(e)}"
         )
 
-@router.get("/count")
+@router.get("/count/")
 async def get_articles_count(db: Session = Depends(get_db)):
     """Đếm tổng số articles"""
     try:
@@ -52,7 +52,7 @@ async def get_articles_count(db: Session = Depends(get_db)):
             detail=f"Lỗi khi đếm articles: {str(e)}"
         )
 
-@router.get("/{article_id}", response_model=schemas.ArticleInDB)
+@router.get("/{article_id}/", response_model=schemas.ArticleInDB)
 async def read_article(article_id: int, db: Session = Depends(get_db)):
     """Lấy article theo ID"""
     try:

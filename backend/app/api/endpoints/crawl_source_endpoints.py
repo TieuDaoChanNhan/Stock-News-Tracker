@@ -39,7 +39,7 @@ async def read_crawl_sources(
             detail=f"Lỗi khi lấy danh sách nguồn crawl: {str(e)}"
         )
 
-@router.get("/{source_id}", response_model=schemas.CrawlSourceInDB)
+@router.get("/{source_id}/", response_model=schemas.CrawlSourceInDB)
 async def read_crawl_source(source_id: int, db: Session = Depends(get_db)):
     """Lấy nguồn crawl theo ID"""
     source = crud.get_crawl_source(db=db, source_id=source_id)
@@ -50,7 +50,7 @@ async def read_crawl_source(source_id: int, db: Session = Depends(get_db)):
         )
     return source
 
-@router.put("/{source_id}", response_model=schemas.CrawlSourceInDB)
+@router.put("/{source_id}/", response_model=schemas.CrawlSourceInDB)
 async def update_crawl_source(
     source_id: int,
     source_update: schemas.CrawlSourceUpdate,
@@ -65,7 +65,7 @@ async def update_crawl_source(
         )
     return source
 
-@router.delete("/{source_id}")
+@router.delete("/{source_id}/")
 async def delete_crawl_source(source_id: int, db: Session = Depends(get_db)):
     """Xóa nguồn crawl"""
     success = crud.delete_crawl_source(db=db, source_id=source_id)
