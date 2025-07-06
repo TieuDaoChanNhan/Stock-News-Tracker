@@ -6,7 +6,7 @@ from app.crud import watchlist_crud as crud
 from app.schemas import watchlist_schema as schemas
 from app.database import get_db
 
-router = APIRouter(prefix="/api/v1/users/{user_id}/watchlist", tags=["watchlist"])
+router = APIRouter(prefix="/users/{user_id}/watchlist", tags=["watchlist"])
 
 @router.post("/", response_model=schemas.WatchlistItemInDB, status_code=status.HTTP_201_CREATED)
 async def add_watchlist_item(

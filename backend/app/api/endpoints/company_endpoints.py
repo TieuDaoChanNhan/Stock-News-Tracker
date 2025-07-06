@@ -7,7 +7,7 @@ from app.schemas import company_schema as schemas
 from app.database import get_db
 from app.services.financial_api_service import financial_api
 
-router = APIRouter(prefix="/api/v1/companies", tags=["companies"])
+router = APIRouter(prefix="/companies", tags=["companies"])
 
 @router.post("/", response_model=schemas.CompanyInDB, status_code=status.HTTP_201_CREATED)
 async def create_company(

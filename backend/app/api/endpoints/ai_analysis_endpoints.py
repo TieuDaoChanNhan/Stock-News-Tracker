@@ -7,7 +7,7 @@ from app.crud import ai_analysis_crud as crud
 from app.schemas import ai_analysis_schema as schemas
 from app.database import get_db
 
-router = APIRouter(prefix="/api/v1/ai-analysis", tags=["ai-analysis"])
+router = APIRouter(prefix="/ai-analysis", tags=["ai-analysis"])
 
 @router.get("/article/{article_id}", response_model=schemas.AIAnalysisResponse)
 async def get_ai_analysis(article_id: int, db: Session = Depends(get_db)):

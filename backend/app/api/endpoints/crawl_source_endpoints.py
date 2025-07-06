@@ -6,7 +6,7 @@ from app.crud import crawl_source_crud as crud
 from app.schemas import crawl_source_schema as schemas
 from app.database import get_db
 
-router = APIRouter(prefix="/api/v1/crawl-sources", tags=["crawl-sources"])
+router = APIRouter(prefix="/crawl-sources", tags=["crawl-sources"])
 
 @router.post("/", response_model=schemas.CrawlSourceInDB, status_code=status.HTTP_201_CREATED)
 async def create_crawl_source(

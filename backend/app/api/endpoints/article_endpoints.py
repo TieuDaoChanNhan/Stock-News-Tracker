@@ -7,7 +7,7 @@ from app.schemas import article_schema as schemas
 from app.database import get_db
 
 # Tạo router
-router = APIRouter(prefix="/api/v1/articles", tags=["articles"])
+router = APIRouter(prefix="/articles", tags=["articles"])
 
 @router.post("/", response_model=schemas.ArticleInDB, status_code=status.HTTP_201_CREATED)
 async def create_new_article(
