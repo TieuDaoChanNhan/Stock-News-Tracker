@@ -1,7 +1,7 @@
 import requests
 import json
 
-API_BASE_URL = "http://127.0.0.1:8000/api/v1"
+API_BASE_URL = "API_BASE_URL"
 
 # Danh sách nguồn crawl mẫu
 sample_sources = [
