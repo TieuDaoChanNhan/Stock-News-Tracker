@@ -1,4 +1,6 @@
+import asyncio
 import logging
+import threading
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -44,6 +46,7 @@ async def startup_event():
     from app.models import article_model, crawl_source_model, watchlist_model, ai_analysis_model, company_model
     database.init_db()
     print("✅ Database đã được khởi tạo!")
+    threading.Thread(target=start_scheduler).start()
 
 # Include routers
 app.include_router(article_endpoints.router)
