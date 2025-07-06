@@ -21,7 +21,7 @@ from setup_company import main as company_setup
 from app.services.notification_service import test_telegram_connection
 from app.services.financial_api_service import fetch_all_active_company_metrics
 
-API_BASE_URL = "API_BASE_URL"
+API_BASE_URL = "https://stock-news-tracker-production.up.railway.app/api/v1"
 
 def post_article_to_api(article_data: dict) -> Optional[Dict]:
     """Gửi bài báo đã crawl lên API để lưu trữ."""

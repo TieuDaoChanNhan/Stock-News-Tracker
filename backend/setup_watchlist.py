@@ -1,7 +1,7 @@
 import requests
 import json
 
-API_BASE_URL = "API_BASE_URL"
+API_BASE_URL = "https://stock-news-tracker-production.up.railway.app/api/v1"
 USER_ID = "ong_x"
 
 # Danh sách watchlist mẫu
