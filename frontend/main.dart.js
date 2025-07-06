@@ -29434,7 +29434,7 @@ while(true)switch(s){case 0:s=2
 return A.H(A.ann(),$async$a4r)
 case 2:return A.D(null,r)}})
 return A.E($async$a4r,r)},
-aSJ(){switch(0){case 0:return"http://localhost:8000/api/v1"}},
+aSJ(){switch(0){case 0:return"https://stock-news-tracker-production.up.railway.app/api/v1"}},
 b1y(a){switch(a.a){case 0:return B.nG
 case 2:return B.HX
 case 1:return B.HW
