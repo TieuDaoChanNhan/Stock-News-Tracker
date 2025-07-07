@@ -19,7 +19,6 @@ app = FastAPI(
     title="Stock News Tracker API",
     version="0.3.0",
     description="API để quản lý tin tức tài chính, nguồn crawler và watchlist",
-    redirect_slashes=True,  # <- thêm dòng này
 )
 
 # ✅ SỬA: CORS Configuration chi tiết cho Flutter web
