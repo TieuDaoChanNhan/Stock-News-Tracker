@@ -124,7 +124,6 @@ async def startup_event():
         print("✅ Database đã được khởi tạo!")
         logger.info("Database initialized successfully")
         
-        # Start scheduler nếu không phải Railway environment
         threading.Thread(target=start_scheduler, daemon=True).start()
             
     except Exception as e:
