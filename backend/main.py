@@ -126,11 +126,7 @@ async def startup_event():
         logger.info("Database initialized successfully")
         
         # Start scheduler nếu không phải Railway environment
-        if os.getenv("START_SCHEDULER", "true").lower() == "true":
-            threading.Thread(target=start_scheduler, daemon=True).start()
-            logger.info("Scheduler started in background thread")
-        else:
-            logger.info("Scheduler disabled for Railway deployment")
+        threading.Thread(target=start_scheduler, daemon=True).start()
             
     except Exception as e:
         logger.error(f"Startup error: {e}", exc_info=True)
