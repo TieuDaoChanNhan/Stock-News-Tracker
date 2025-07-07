@@ -182,9 +182,9 @@ def main():
     test_telegram_connection()
         
     # Lập lịch
-    schedule.every(1).hours.do(gather_data)
+    schedule.every(2.4).hours.do(gather_data)
     
-    print("⏰ Scheduler đã khởi động. Lịch: Mỗi 15 phút.")
+    print("⏰ Scheduler đã khởi động. Lịch: Mỗi 2.4 tiếng.")
     print("🤖 AI phân tích sẽ được thực hiện tự động trong backend.")
     
     # Chạy ngay lần đầu để test
