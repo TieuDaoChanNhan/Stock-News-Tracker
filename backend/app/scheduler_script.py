@@ -111,16 +111,29 @@ def fetch_and_process_all_active_sources():
     except Exception as e:
         print(f"❌ Lỗi nghiêm trọng trong chu kỳ xử lý: {e}")
 
-def check_api_connection():
-    """Kiểm tra kết nối API."""
-    try:
-        response = requests.get(f"{API_BASE_URL.replace('/api/v1', '')}/health", timeout=5)
-        response.raise_for_status()
-        print("✅ API đang hoạt động")
-        return True
-    except Exception as e:
-        print(f"❌ Không thể kết nối API: {e}")
-        return False
+def check_api_connection(max_retries: int = 5, wait_seconds: int = 2) -> bool:
+    """
+    Kiểm tra xem API đã sẵn sàng chưa bằng cách gửi GET đến một endpoint tồn tại.
+    Tránh dùng POST nếu không muốn tạo dữ liệu sample.
+    """
+    health_url = f"{API_BASE_URL}/articles/count"
+    
+    for attempt in range(1, max_retries + 1):
+        try:
+            print(f"🔎 Kiểm tra API lần {attempt}... ({health_url})")
+            response = requests.get(health_url, timeout=5)
+            if response.status_code == 200:
+                print("✅ API đã sẵn sàng!")
+                return True
+            else:
+                print(f"⚠️ Phản hồi không hợp lệ: {response.status_code}")
+        except Exception as e:
+            print(f"⚠️ Kết nối thất bại: {e}")
+        
+        time.sleep(wait_seconds)
+    
+    print("❌ API chưa sẵn sàng sau nhiều lần thử.")
+    return False
 
 def fetch_company_metrics():
     """
