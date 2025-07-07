@@ -63,7 +63,7 @@ def fetch_and_process_all_active_sources():
     print(f"\n🕐 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Bắt đầu chu kỳ xử lý...")
     
     try:
-        response = requests.get(f"{API_BASE_URL}/crawl-sources/?is_active=true")
+        response = requests.get(f"{API_BASE_URL}/crawl-sources", params={"is_active": True})
         response.raise_for_status()
         sources = response.json()
         print(f"📊 Tìm thấy {len(sources)} nguồn đang hoạt động.")
@@ -148,8 +148,8 @@ def fetch_company_metrics():
         print(f"❌ SCHEDULER: Lỗi khi gọi Financial API Service: {e}")
 
 def gather_data():
-    fetch_company_metrics()
     fetch_and_process_all_active_sources()
+    fetch_company_metrics()
 
 
 def main():
