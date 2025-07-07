@@ -166,23 +166,23 @@ def main():
     if not check_api_connection():
         return
         
-    # Lập lịch
-    schedule.every(1).hours.do(gather_data)
+    # # Lập lịch
+    # schedule.every(1).hours.do(gather_data)
     
-    print("⏰ Scheduler đã khởi động. Lịch: Mỗi 15 phút.")
-    print("🤖 AI phân tích sẽ được thực hiện tự động trong backend.")
+    # print("⏰ Scheduler đã khởi động. Lịch: Mỗi 15 phút.")
+    # print("🤖 AI phân tích sẽ được thực hiện tự động trong backend.")
     
-    # Chạy ngay lần đầu để test
-    print("\n🚀 Chạy chu kỳ đầu tiên ngay bây giờ...")
-    gather_data()
+    # # Chạy ngay lần đầu để test
+    # print("\n🚀 Chạy chu kỳ đầu tiên ngay bây giờ...")
+    # gather_data()
     
-    # Vòng lặp chính
-    try:
-        while True:
-            schedule.run_pending()
-            time.sleep(60)
-    except KeyboardInterrupt:
-        print("\n👋 Đã dừng scheduler.")
+    # # Vòng lặp chính
+    # try:
+    #     while True:
+    #         schedule.run_pending()
+    #         time.sleep(60)
+    # except KeyboardInterrupt:
+    #     print("\n👋 Đã dừng scheduler.")
 
 if __name__ == "__main__":
     main()

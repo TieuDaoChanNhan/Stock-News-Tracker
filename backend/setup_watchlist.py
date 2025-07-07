@@ -41,7 +41,7 @@ def main():
         add_watchlist_item(item)
     
     print(f"\n✅ Đã thiết lập {len(sample_watchlist)} items cho watchlist")
-    print("💡 Kiểm tra tại: http://127.0.0.1:8000/docs")
+    print("💡 Kiểm tra tại: https://stock-news-tracker-production.up.railway.app/docs")
 
 if __name__ == "__main__":
     main()

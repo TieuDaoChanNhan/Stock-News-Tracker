@@ -191,7 +191,6 @@ async def cors_test():
 
 if __name__ == "__main__":
     import uvicorn
-    # ✅ SỬA: Dynamic port cho Railway
     port = int(os.getenv("PORT", 8000))
     uvicorn.run(
         app, 
