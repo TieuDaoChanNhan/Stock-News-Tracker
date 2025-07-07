@@ -171,6 +171,8 @@ def main():
     print("🤖 STOCK NEWS TRACKER SCHEDULER (with Gemini AI)")
     print("=" * 80)
 
+    time.sleep(10)
+
     if not check_api_connection():
         return
 
