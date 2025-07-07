@@ -17,7 +17,6 @@ logger = logging.getLogger(__name__)
 # Tạo FastAPI app
 app = FastAPI(
     title="Stock News Tracker API",
-    root_path="/",  # optional
     version="0.3.0",
     description="API để quản lý tin tức tài chính, nguồn crawler và watchlist",
     redirect_slashes=True,  # <- thêm dòng này
@@ -171,8 +170,8 @@ async def root():
     }
 
 # ✅ SỬA: Health check endpoint support cả GET và HEAD
-@app.get("/health")
-@app.head("/health")
+@app.get("/health/")
+@app.head("/health/")
 async def health_check():
     return {
         "status": "ok", 
@@ -182,7 +181,7 @@ async def health_check():
     }
 
 # ✅ THÊM: CORS test endpoint để debug
-@app.get("/cors-test")
+@app.get("/cors-test/")
 async def cors_test():
     return {
         "message": "CORS is working perfectly!",
