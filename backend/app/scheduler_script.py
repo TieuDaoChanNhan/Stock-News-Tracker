@@ -171,13 +171,13 @@ def main():
     print("🤖 STOCK NEWS TRACKER SCHEDULER (with Gemini AI)")
     print("=" * 80)
 
+    if not check_api_connection():
+        return
+
     source_setup()
     watchlist_setup()
     company_setup()
     test_telegram_connection()
-    
-    if not check_api_connection():
-        return
         
     # Lập lịch
     schedule.every(1).hours.do(gather_data)
