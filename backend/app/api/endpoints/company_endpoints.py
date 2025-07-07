@@ -9,7 +9,7 @@ from app.services.financial_api_service import financial_api
 
 router = APIRouter(prefix="/companies", tags=["companies"])
 
-@router.post("/", response_model=schemas.CompanyInDB, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=schemas.CompanyInDB, status_code=status.HTTP_201_CREATED)
 async def create_company(
     company: schemas.CompanyCreate, 
     db: Session = Depends(get_db)
@@ -34,7 +34,7 @@ async def create_company(
             detail=f"Error creating company: {str(e)}"
         )
 
-@router.get("/", response_model=List[schemas.CompanyInDB])
+@router.get("", response_model=List[schemas.CompanyInDB])
 async def list_companies(
     skip: int = 0, 
     limit: int = 50, 
@@ -51,7 +51,7 @@ async def list_companies(
             detail=f"Error fetching companies: {str(e)}"
         )
 
-@router.get("/{symbol}/", response_model=schemas.CompanyInDB)
+@router.get("/{symbol}", response_model=schemas.CompanyInDB)
 async def get_company(symbol: str, db: Session = Depends(get_db)):
     """Get specific company by symbol"""
     try:
@@ -70,7 +70,7 @@ async def get_company(symbol: str, db: Session = Depends(get_db)):
             detail=f"Error fetching company: {str(e)}"
         )
 
-@router.put("/{symbol}/", response_model=schemas.CompanyInDB)
+@router.put("/{symbol}", response_model=schemas.CompanyInDB)
 async def update_company(
     symbol: str, 
     company_update: schemas.CompanyUpdate, 
@@ -93,7 +93,7 @@ async def update_company(
             detail=f"Error updating company: {str(e)}"
         )
 
-@router.delete("/{symbol}/")
+@router.delete("/{symbol}")
 async def delete_company(symbol: str, db: Session = Depends(get_db)):
     """Remove company from tracking"""
     try:
@@ -112,7 +112,7 @@ async def delete_company(symbol: str, db: Session = Depends(get_db)):
             detail=f"Error deleting company: {str(e)}"
         )
 
-@router.get("/{symbol}/metrics/", response_model=List[schemas.CompanyMetricsInDB])
+@router.get("/{symbol}/metrics", response_model=List[schemas.CompanyMetricsInDB])
 async def get_company_metrics_history(
     symbol: str, 
     limit: int = 10, 
@@ -138,7 +138,7 @@ async def get_company_metrics_history(
             detail=f"Error fetching metrics history: {str(e)}"
         )
 
-@router.get("/{symbol}/metrics/latest/", response_model=schemas.CompanyMetricsInDB)
+@router.get("/{symbol}/metrics/latest", response_model=schemas.CompanyMetricsInDB)
 async def get_latest_metrics(symbol: str, db: Session = Depends(get_db)):
     """Get most recent metrics for a company"""
     try:
@@ -166,7 +166,7 @@ async def get_latest_metrics(symbol: str, db: Session = Depends(get_db)):
             detail=f"Error fetching latest metrics: {str(e)}"
         )
 
-@router.post("/{symbol}/fetch-metrics/")
+@router.post("/{symbol}/fetch-metrics")
 async def fetch_and_save_metrics(symbol: str, db: Session = Depends(get_db)):
     """Manually trigger metrics fetch for a specific company"""
     try:
@@ -210,7 +210,7 @@ async def fetch_and_save_metrics(symbol: str, db: Session = Depends(get_db)):
             detail=f"Error fetching metrics for {symbol}: {str(e)}"
         )
 
-@router.get("/overview/dashboard/")
+@router.get("/overview/dashboard")
 async def get_dashboard_overview(db: Session = Depends(get_db)):
     """Get overview dashboard data"""
     try:

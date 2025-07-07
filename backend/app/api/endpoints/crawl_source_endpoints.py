@@ -8,7 +8,7 @@ from app.database import get_db
 
 router = APIRouter(prefix="/crawl-sources", tags=["crawl-sources"])
 
-@router.post("/", response_model=schemas.CrawlSourceInDB, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=schemas.CrawlSourceInDB, status_code=status.HTTP_201_CREATED)
 async def create_crawl_source(
     source: schemas.CrawlSourceCreate, 
     db: Session = Depends(get_db)
@@ -22,7 +22,7 @@ async def create_crawl_source(
             detail=f"Lỗi khi tạo nguồn crawl: {str(e)}"
         )
 
-@router.get("/", response_model=List[schemas.CrawlSourceInDB])
+@router.get("", response_model=List[schemas.CrawlSourceInDB])
 async def read_crawl_sources(
     skip: int = 0,
     limit: int = 100,
@@ -39,7 +39,7 @@ async def read_crawl_sources(
             detail=f"Lỗi khi lấy danh sách nguồn crawl: {str(e)}"
         )
 
-@router.get("/{source_id}/", response_model=schemas.CrawlSourceInDB)
+@router.get("/{source_id}", response_model=schemas.CrawlSourceInDB)
 async def read_crawl_source(source_id: int, db: Session = Depends(get_db)):
     """Lấy nguồn crawl theo ID"""
     source = crud.get_crawl_source(db=db, source_id=source_id)
@@ -50,7 +50,7 @@ async def read_crawl_source(source_id: int, db: Session = Depends(get_db)):
         )
     return source
 
-@router.put("/{source_id}/", response_model=schemas.CrawlSourceInDB)
+@router.put("/{source_id}", response_model=schemas.CrawlSourceInDB)
 async def update_crawl_source(
     source_id: int,
     source_update: schemas.CrawlSourceUpdate,
@@ -65,7 +65,7 @@ async def update_crawl_source(
         )
     return source
 
-@router.delete("/{source_id}/")
+@router.delete("/{source_id}")
 async def delete_crawl_source(source_id: int, db: Session = Depends(get_db)):
     """Xóa nguồn crawl"""
     success = crud.delete_crawl_source(db=db, source_id=source_id)

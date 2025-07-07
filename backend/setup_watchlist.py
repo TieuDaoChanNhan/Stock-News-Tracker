@@ -25,7 +25,7 @@ sample_watchlist = [
 def add_watchlist_item(item_data):
     """Thêm item vào watchlist"""
     try:
-        response = requests.post(f"{API_BASE_URL}/users/{USER_ID}/watchlist/", json=item_data)
+        response = requests.post(f"{API_BASE_URL}/users/{USER_ID}/watchlist", json=item_data)
         response.raise_for_status()
         result = response.json()
         print(f"✅ Đã thêm: {item_data['item_value']} ({item_data['item_type']})")

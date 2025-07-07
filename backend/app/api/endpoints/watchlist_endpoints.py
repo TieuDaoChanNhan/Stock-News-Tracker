@@ -8,7 +8,7 @@ from app.database import get_db
 
 router = APIRouter(prefix="/users/{user_id}/watchlist", tags=["watchlist"])
 
-@router.post("/", response_model=schemas.WatchlistItemInDB, status_code=status.HTTP_201_CREATED)
+@router.post("", response_model=schemas.WatchlistItemInDB, status_code=status.HTTP_201_CREATED)
 async def add_watchlist_item(
     user_id: str,
     item: schemas.WatchlistItemCreate,
@@ -24,7 +24,7 @@ async def add_watchlist_item(
             detail=f"Lỗi khi thêm vào watchlist: {str(e)}"
         )
 
-@router.get("/", response_model=List[schemas.WatchlistItemInDB])
+@router.get("", response_model=List[schemas.WatchlistItemInDB])
 async def get_watchlist(user_id: str, db: Session = Depends(get_db)):
     """Lấy danh sách watchlist của user"""
     try:
@@ -36,7 +36,7 @@ async def get_watchlist(user_id: str, db: Session = Depends(get_db)):
             detail=f"Lỗi khi lấy watchlist: {str(e)}"
         )
 
-@router.delete("/{item_id}/", response_model=schemas.WatchlistItemInDB)
+@router.delete("/{item_id}", response_model=schemas.WatchlistItemInDB)
 async def remove_watchlist_item(
     user_id: str,
     item_id: int,

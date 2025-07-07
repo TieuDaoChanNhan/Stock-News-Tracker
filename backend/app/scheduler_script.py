@@ -36,7 +36,7 @@ def post_article_to_api(article_data: dict) -> Optional[Dict]:
     payload = {k: v for k, v in payload.items() if v is not None}
 
     try:
-        response = requests.post(f"{API_BASE_URL}/articles/", json=payload)
+        response = requests.post(f"{API_BASE_URL}/articles", json=payload)
         response.raise_for_status()
         
         created_article = response.json()
@@ -51,7 +51,7 @@ def update_source_last_crawled(source_id: int) -> bool:
     """Cập nhật thời gian crawl cuối cho nguồn."""
     try:
         payload = {"last_crawled_at": datetime.now().isoformat()}
-        response = requests.put(f"{API_BASE_URL}/crawl-sources/{source_id}/", json=payload)
+        response = requests.put(f"{API_BASE_URL}/crawl-sources/{source_id}", json=payload)
         response.raise_for_status()
         return True
     except Exception as e:
@@ -63,7 +63,7 @@ def fetch_and_process_all_active_sources():
     print(f"\n🕐 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Bắt đầu chu kỳ xử lý...")
     
     try:
-        response = requests.get(f"{API_BASE_URL}/crawl-sources/?is_active=true/")
+        response = requests.get(f"{API_BASE_URL}/crawl-sources/?is_active=true")
         response.raise_for_status()
         sources = response.json()
         print(f"📊 Tìm thấy {len(sources)} nguồn đang hoạt động.")
@@ -114,7 +114,7 @@ def fetch_and_process_all_active_sources():
 def check_api_connection():
     """Kiểm tra kết nối API."""
     try:
-        response = requests.get(f"{API_BASE_URL.replace('/api/v1', '')}/health/", timeout=5)
+        response = requests.get(f"{API_BASE_URL.replace('/api/v1', '')}/health", timeout=5)
         response.raise_for_status()
         print("✅ API đang hoạt động")
         return True

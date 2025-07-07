@@ -9,7 +9,7 @@ from app.database import get_db
 
 router = APIRouter(prefix="/ai-analysis", tags=["ai-analysis"])
 
-@router.get("/article/{article_id}/", response_model=schemas.AIAnalysisResponse)
+@router.get("/article/{article_id}", response_model=schemas.AIAnalysisResponse)
 async def get_ai_analysis(article_id: int, db: Session = Depends(get_db)):
     """Lấy AI analysis của bài báo"""
     try:
@@ -32,12 +32,12 @@ async def get_ai_analysis(article_id: int, db: Session = Depends(get_db)):
             detail=f"Error fetching AI analysis: {str(e)}"
         )
 
-@router.get("/category/{category}/", response_model=List[schemas.ArticleWithAIResponse])
+@router.get("/category/{category}", response_model=List[schemas.ArticleWithAIResponse])
 async def get_articles_by_category(category: str, db: Session = Depends(get_db)):
     """Lấy articles theo category"""
     return crud.get_articles_by_category(db, category)
 
-@router.get("/high-impact/", response_model=List[schemas.ArticleWithAIResponse])
+@router.get("/high-impact", response_model=List[schemas.ArticleWithAIResponse])
 async def get_high_impact_articles(min_impact: float = 0.7, db: Session = Depends(get_db)):
     """Lấy articles có impact cao"""
     return crud.get_high_impact_articles(db, min_impact)

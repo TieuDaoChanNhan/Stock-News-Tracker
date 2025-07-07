@@ -92176,7 +92176,7 @@ J(a){var s,r=null,q=A.aD5(B.ax,r,r,B.ih),p=A.b3g().$0()
 p=A.l0(B.p0,r,A.aHx(2,new A.cJ(A.bO(12),B.z)),q,new A.qd(A.Av(r,r,r,r,r,r,2,r,r,r,r,r,B.iD,r,new A.cJ(A.bO(8),B.z),r,r,r,r)),A.aJ9(new A.hB(4,A.bO(8),B.fK),B.qI),p,!0)
 q=A.aD5(B.aH,r,r,B.ih)
 s=A.aEj(A.l0(r,B.aH,r,r,r,r,r,r).p1)
-return new A.B5("/dashboard/","Stock News Tracking System",p,A.l0(B.p0,r,A.aHx(2,new A.cJ(A.bO(12),B.z)),q,new A.qd(A.Av(r,r,r,r,r,r,2,r,r,r,r,r,B.iD,r,new A.cJ(A.bO(8),B.z),r,r,r,r)),A.aJ9(new A.hB(4,A.bO(8),B.fK),B.qI),s,!0),B.JJ,B.a1k,B.yU,!1,$.aOE(),r)}}
+return new A.B5("/dashboard","Stock News Tracking System",p,A.l0(B.p0,r,A.aHx(2,new A.cJ(A.bO(12),B.z)),q,new A.qd(A.Av(r,r,r,r,r,r,2,r,r,r,r,r,B.iD,r,new A.cJ(A.bO(8),B.z),r,r,r,r)),A.aJ9(new A.hB(4,A.bO(8),B.fK),B.qI),s,!0),B.JJ,B.a1k,B.yU,!1,$.aOE(),r)}}
 A.tR.prototype={
 J(a){var s=null,r=A.aDT($.a9(),A.aH2(),t.L4)
 return new A.jL(A.ox(A.pE(A.a([A.fa(s,s,s,B.c0,s,s,new A.a2y(r),s,s,s,s)],t.p),B.aeN),new A.eR(new A.a2z(this,r,a),s),s),s)},
@@ -92355,14 +92355,14 @@ A.a2k.prototype={
 $2(a,b){return a+b},
 $S:101}
 A.a2i.prototype={
-$0(){return A.iP($.a9(),"/articles/",t.z)},
+$0(){return A.iP($.a9(),"/articles",t.z)},
 $S:0}
 A.a2j.prototype={
 $2(a,b){return this.a.a7a(a,J.br(this.b.dx.gm(),b))},
 $S:43}
 A.a2h.prototype={
 $0(){var s=$.a9(),r=this.a.gXW().k(0)
-return A.iP(s,A.fN("/articles/:id/",":id",r),t.z)},
+return A.iP(s,A.fN("/articles/:id",":id",r),t.z)},
 $S:0}
 A.KJ.prototype={
 kK(){A.fs($.a9(),new A.a25(),!1,t.L4)},
@@ -92762,7 +92762,7 @@ $0(){return this.a.BO()},
 $S:0}
 A.a34.prototype={
 $0(){var s=$.a9(),r=B.i.k(this.a.a)
-return A.iP(s,A.fN("/articles/:id/",":id",r),t.z)},
+return A.iP(s,A.fN("/articles/:id",":id",r),t.z)},
 $S:0}
 A.KS.prototype={
 kK(){A.fs($.a9(),new A.a2U(),!1,t.aw)},
@@ -93031,7 +93031,7 @@ $0(){return this.a.hy(this.b.b)},
 $S:0}
 A.a5p.prototype={
 $0(){var s=$.a9()
-return A.iP(s,A.fN("/companies/:symbol/",":symbol",this.a.b),t.z)},
+return A.iP(s,A.fN("/companies/:symbol",":symbol",this.a.b),t.z)},
 $S:0}
 A.a5q.prototype={
 $0(){return A.lO($.a9())},
@@ -93703,16 +93703,16 @@ A.a6A.prototype={
 $0(){return this.a.rJ()},
 $S:20}
 A.a6v.prototype={
-$0(){return A.iP($.a9(),"/articles/",t.z)},
+$0(){return A.iP($.a9(),"/articles",t.z)},
 $S:0}
 A.a6w.prototype={
-$0(){return A.iP($.a9(),"/companies/",t.z)},
+$0(){return A.iP($.a9(),"/companies",t.z)},
 $S:0}
 A.a6x.prototype={
-$0(){return A.iP($.a9(),"/watchlist/",t.z)},
+$0(){return A.iP($.a9(),"/watchlist",t.z)},
 $S:0}
 A.a6y.prototype={
-$0(){return A.iP($.a9(),"/analytics/",t.z)},
+$0(){return A.iP($.a9(),"/analytics",t.z)},
 $S:0}
 A.KK.prototype={
 J(a){var s,r,q=this,p=null,o=A.l(a).p1.f,n=t.p,m=q.d
@@ -93732,7 +93732,7 @@ a6A(a){switch(a){case"T\xedch c\u1ef1c":return B.a3
 case"Ti\xeau c\u1ef1c":return B.aO
 default:return B.R}}}
 A.a2f.prototype={
-$0(){return A.iP($.a9(),"/analytics/",t.z)},
+$0(){return A.iP($.a9(),"/analytics",t.z)},
 $S:0}
 A.a2g.prototype={
 $2(a,b){var s=null,r=this.a.c,q=new A.dJ(r,A.m(r).i("dJ<1,2>")).cC(0,b)
@@ -93769,7 +93769,7 @@ aag(a){if(a>=1e9)return"$"+B.c.a5(a/1e9,1)+"B"
 else if(a>=1e6)return"$"+B.c.a5(a/1e6,1)+"M"
 return"$"+a}}
 A.a5X.prototype={
-$0(){return A.iP($.a9(),"/companies/",t.z)},
+$0(){return A.iP($.a9(),"/companies",t.z)},
 $S:0}
 A.a5Y.prototype={
 $2(a,b){var s=this.a
@@ -93777,7 +93777,7 @@ return s.a74(a,s.c.f[b])},
 $S:43}
 A.a5W.prototype={
 $0(){var s=$.a9()
-return A.iP(s,A.fN("/companies/:symbol/",":symbol",this.a.a),t.z)},
+return A.iP(s,A.fN("/companies/:symbol",":symbol",this.a.a),t.z)},
 $S:0}
 A.Px.prototype={
 J(a){var s,r,q,p,o,n,m,l=this,k=null,j=A.l(a).p1.f
@@ -93872,11 +93872,11 @@ $2(a,b){var s=this.a
 return s.a7_(a,J.br(s.c,b))},
 $S:43}
 A.ajE.prototype={
-$0(){return A.iP($.a9(),"/articles/",t.z)},
+$0(){return A.iP($.a9(),"/articles",t.z)},
 $S:0}
 A.ajC.prototype={
 $0(){var s=$.a9(),r=B.i.k(this.a.a)
-return A.iP(s,A.fN("/articles/:id/",":id",r),t.z)},
+return A.iP(s,A.fN("/articles/:id",":id",r),t.z)},
 $S:0}
 A.QY.prototype={
 kK(){A.fs($.a9(),new A.an4(),!1,t.Uh)},
@@ -94578,26 +94578,26 @@ if(s==null)s=$.aM=B.a2
 return new A.x5(s.d9(null,t.BZ))},
 $S:648}
 A.rc.prototype={
-afK(a){switch(a){case 0:A.Nv($.a9(),"/dashboard/",t.z)
+afK(a){switch(a){case 0:A.Nv($.a9(),"/dashboard",t.z)
 break
-case 1:A.Nv($.a9(),"/articles/",t.z)
+case 1:A.Nv($.a9(),"/articles",t.z)
 break
-case 2:A.Nv($.a9(),"/companies/",t.z)
+case 2:A.Nv($.a9(),"/companies",t.z)
 break
-case 3:A.Nv($.a9(),"/watchlist/",t.z)
+case 3:A.Nv($.a9(),"/watchlist",t.z)
 break
-case 4:A.Nv($.a9(),"/analytics/",t.z)
+case 4:A.Nv($.a9(),"/analytics",t.z)
 break}},
 i4(){var s,r,q=this
 q.ks()
 $.a9()
 s=$.dd().to.a
-if(B.d.bc(s,"/dashboard/"))q.ax.sm(0)
-else if(B.d.bc(s,"/articles/"))q.ax.sm(1)
-else if(B.d.bc(s,"/companies/"))q.ax.sm(2)
-else if(B.d.bc(s,"/watchlist/"))q.ax.sm(3)
+if(B.d.bc(s,"/dashboard"))q.ax.sm(0)
+else if(B.d.bc(s,"/articles"))q.ax.sm(1)
+else if(B.d.bc(s,"/companies"))q.ax.sm(2)
+else if(B.d.bc(s,"/watchlist"))q.ax.sm(3)
 else{r=q.ax
-if(B.d.bc(s,"/analytics/"))r.sm(4)
+if(B.d.bc(s,"/analytics"))r.sm(4)
 else r.sm(0)}}}
 A.Kz.prototype={
 fG(){var s=this,r=s.w
@@ -94878,7 +94878,7 @@ a_s(a){var s=0,r=A.G(t.fT),q,p=2,o=[],n=this,m,l,k,j,i
 var $async$t1=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/ai-analysis//article/"+a+"/",t.z),$async$t1)
+return A.B(n.a.mo("/ai-analysis/article/"+a,t.z),$async$t1)
 case 7:m=c
 if(m.c===200){k=A.aH0(m.a)
 q=k
@@ -94910,7 +94910,7 @@ var $async$ko=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 j=t.z
 s=7
-return A.B(n.a.pF("/ai-analysis//high-impact/",A.av(["min_impact",a],t.N,j),j),$async$ko)
+return A.B(n.a.pF("/ai-analysis/high-impact",A.av(["min_impact",a],t.N,j),j),$async$ko)
 case 7:m=c
 if(m.c===200){l=m.a
 j=J.fk(l,new A.a1O(),t.cY)
@@ -94939,7 +94939,7 @@ a_w(a){var s=0,r=A.G(t.i7),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$le=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/ai-analysis//category/"+a+"/",t.z),$async$le)
+return A.B(n.a.mo("/ai-analysis/category/"+a,t.z),$async$le)
 case 7:m=c
 if(m.c===200){l=m.a
 j=J.fk(l,new A.a1N(),t.cY)
@@ -94976,7 +94976,7 @@ var $async$AS=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 i=t.z
 s=7
-return A.B(n.a.pF("/articles/",A.av(["skip",b,"limit",a],t.N,i),i),$async$AS)
+return A.B(n.a.pF("/articles",A.av(["skip",b,"limit",a],t.N,i),i),$async$AS)
 case 7:m=d
 if(m.c===200){l=m.a
 i=J.fk(l,new A.a31(),t.HT)
@@ -95005,7 +95005,7 @@ apC(a){var s=0,r=A.G(t.HT),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AR=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/articles//"+a+"/",t.z),$async$AR)
+return A.B(n.a.mo("/articles/"+a,t.z),$async$AR)
 case 7:m=c
 if(m.c===200){j=A.aCS(m.a)
 q=j
@@ -95031,7 +95031,7 @@ AT(){var s=0,r=A.G(t.a),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AT=A.C(function(a,b){if(a===1){o.push(b)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/articles/count/",t.z),$async$AT)
+return A.B(n.a.mo("/articles/count",t.z),$async$AT)
 case 7:m=b
 if(m.c===200){j=m.a
 q=j
@@ -95063,7 +95063,7 @@ var $async$AU=A.C(function(d,e){if(d===1){o.push(e)
 s=p}while(true)switch(s){case 0:p=4
 i=t.z
 s=7
-return A.B(n.a.pF("/companies/",A.av(["skip",c,"limit",b,"active_only",a],t.N,i),i),$async$AU)
+return A.B(n.a.pF("/companies",A.av(["skip",c,"limit",b,"active_only",a],t.N,i),i),$async$AU)
 case 7:m=e
 if(m.c===200){l=m.a
 i=J.fk(l,new A.a5j(),t.OI)
@@ -95092,7 +95092,7 @@ apF(a){var s=0,r=A.G(t.OI),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AV=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/companies//"+a+"/",t.z),$async$AV)
+return A.B(n.a.mo("/companies/"+a,t.z),$async$AV)
 case 7:m=c
 if(m.c===200){j=A.aD8(m.a)
 q=j
@@ -95120,7 +95120,7 @@ var $async$AW=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 i=t.z
 s=7
-return A.B(n.a.pF("/companies//"+a+"/metrics/",A.av(["limit",b],t.N,i),i),$async$AW)
+return A.B(n.a.pF("/companies/"+a+"/metrics",A.av(["limit",b],t.N,i),i),$async$AW)
 case 7:m=d
 if(m.c===200){l=m.a
 i=J.fk(l,new A.a5k(),t.YP)
@@ -95149,7 +95149,7 @@ apI(a){var s=0,r=A.G(t.YP),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AZ=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/companies//"+a+"/metrics/latest/",t.z),$async$AZ)
+return A.B(n.a.mo("/companies/"+a+"/metrics/latest",t.z),$async$AZ)
 case 7:m=c
 if(m.c===200){j=A.aHG(m.a)
 q=j
@@ -95176,7 +95176,7 @@ apJ(a){var s=0,r=A.G(t.a),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$hy=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.auq("/companies//"+a+"/fetch-metrics/",t.z),$async$hy)
+return A.B(n.a.auq("/companies/"+a+"/fetch-metrics",t.z),$async$hy)
 case 7:m=c
 if(m.c===200){j=m.a
 q=j
@@ -95202,7 +95202,7 @@ AY(){var s=0,r=A.G(t.tf),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$AY=A.C(function(a,b){if(a===1){o.push(b)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/companies/overview/dashboard/",t.z),$async$AY)
+return A.B(n.a.mo("/companies/overview/dashboard",t.z),$async$AY)
 case 7:m=b
 if(m.c===200){j=A.aT0(m.a)
 q=j
@@ -95229,7 +95229,7 @@ awe(a,b){var s=0,r=A.G(t.OI),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$lb=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.Zf("/companies//"+a+"/",b,t.z),$async$lb)
+return A.B(n.a.Zf("/companies/"+a,b,t.z),$async$lb)
 case 7:m=d
 if(m.c===200){j=A.aD8(m.a)
 q=j
@@ -95268,7 +95268,7 @@ B0(){var s=0,r=A.G(t.uA),q,p=2,o=[],n=this,m,l,k,j,i,h,g
 var $async$B0=A.C(function(a,b){if(a===1){o.push(b)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.mo("/users/ong_x/watchlist/",t.z),$async$B0)
+return A.B(n.a.mo("/users/ong_x/watchlist",t.z),$async$B0)
 case 7:m=b
 if(m.c===200){l=m.a
 i=J.fk(l,new A.aqj(),t.rc)
@@ -95298,7 +95298,7 @@ var $async$lE=A.C(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
 j=t.z
 s=7
-return A.B(n.a.Z2("/users/ong_x/watchlist/",A.av(["item_type",a.c,"item_value",a.d],t.N,j),j),$async$lE)
+return A.B(n.a.Z2("/users/ong_x/watchlist",A.av(["item_type",a.c,"item_value",a.d],t.N,j),j),$async$lE)
 case 7:m=c
 if(m.c===201){j=A.aLR(m.a)
 q=j
@@ -95325,7 +95325,7 @@ aop(a){var s=0,r=A.G(t.H),q=1,p=[],o=this,n,m,l,k,j,i
 var $async$hX=A.C(function(b,c){if(b===1){p.push(c)
 s=q}while(true)switch(s){case 0:q=3
 s=6
-return A.B(o.a.avj("/users/ong_x/watchlist//"+a+"/",null,null,A.a77("DELETE",null),null,t.z),$async$hX)
+return A.B(o.a.avj("/users/ong_x/watchlist/"+a,null,null,A.a77("DELETE",null),null,t.z),$async$hX)
 case 6:n=c
 if(n.c!==200){k=A.aJ("Failed to delete watchlist item: "+A.j(n.c))
 throw A.f(k)}q=1
@@ -95351,7 +95351,7 @@ s=p}while(true)switch(s){case 0:p=4
 h=t.z
 m=A.y(t.N,h)
 s=7
-return A.B(n.a.pF("/crawl-sources/",m,h),$async$AX)
+return A.B(n.a.pF("/crawl-sources",m,h),$async$AX)
 case 7:l=c
 if(l.c===200){k=l.a
 h=J.fk(k,new A.aqi(),t.Li)
@@ -95380,7 +95380,7 @@ awh(a,b){var s=0,r=A.G(t.Li),q,p=2,o=[],n=this,m,l,k,j,i,h
 var $async$lc=A.C(function(c,d){if(c===1){o.push(d)
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.B(n.a.Zf("/crawl-sources//"+a+"/",b,t.z),$async$lc)
+return A.B(n.a.Zf("/crawl-sources/"+a,b,t.z),$async$lc)
 case 7:m=d
 if(m.c===200){j=A.aHL(m.a)
 q=j
@@ -104178,7 +104178,7 @@ r($,"aXf","aPG",()=>{var q=new A.agU()
 q.NE($.aGu())
 return q})
 s($,"b3V","aOE",()=>{var q=null,p=t.z
-return A.a([A.nJ(q,q,new A.M8(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/dashboard/",!0,new A.a2K(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.KT(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/articles/",!0,new A.a2L(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.KS(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/articles/:id/",!0,new A.a2M(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.LS(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/companies/",!0,new A.a2N(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.LT(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/companies/:symbol/",!0,new A.a2O(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.So(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/watchlist/",!0,new A.a2P(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.KJ(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/analytics/",!0,new A.a2Q(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.QY(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/settings/",!0,new A.a2R(),q,q,q,!0,!0,q,q,q,q,p)],t.RT)})
+return A.a([A.nJ(q,q,new A.M8(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/dashboard",!0,new A.a2K(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.KT(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/articles",!0,new A.a2L(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.KS(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/articles/:id",!0,new A.a2M(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.LS(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/companies",!0,new A.a2N(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.LT(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/companies/:symbol",!0,new A.a2O(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.So(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/watchlist",!0,new A.a2P(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.KJ(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/analytics",!0,new A.a2Q(),q,q,q,!0,!0,q,q,q,q,p),A.nJ(q,q,new A.QY(),B.dw,B.dx,B.J,q,!1,q,!0,q,"/settings",!0,new A.a2R(),q,q,q,!0,!0,q,q,q,q,p)],t.RT)})
 s($,"b6o","aGx",()=>new A.O())
 r($,"aYm","aGw",()=>{var q=new A.agV()
 q.NE($.aGx())

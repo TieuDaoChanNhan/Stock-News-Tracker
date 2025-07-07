@@ -87,7 +87,7 @@ sample_sources = [
     },
     # {
     #     "name": "VnExpress - Trang chủ",
-    #     "url": "https://vnexpress.net/",
+    #     "url": "https://vnexpress.net",
     #     "article_container_selector": ".item-news",
     #     "title_selector": "h3 a, h2 a",
     #     "link_selector": "h3 a, h2 a",
@@ -97,7 +97,7 @@ sample_sources = [
     # },
     # {
     #     "name": "CafeF - Trang chủ",
-    #     "url": "https://cafef.vn/",
+    #     "url": "https://cafef.vn",
     #     "article_container_selector": "div.tlitem, div.top_noibat_row1, .top5_news .tlitem, .box-nha-dau-tu-content .item",
     #     "title_selector": "h2 a, h3 a, a.title", # Thử nhiều loại thẻ chứa tiêu đề
     #     "link_selector": "h2 a, h3 a, a.title",   # Thường giống title_selector
@@ -131,7 +131,7 @@ sample_sources = [
 def add_crawl_source(source_data):
     """Thêm nguồn crawl"""
     try:
-        response = requests.post(f"{API_BASE_URL}/crawl-sources/", json=source_data)
+        response = requests.post(f"{API_BASE_URL}/crawl-sources", json=source_data)
         response.raise_for_status()
         result = response.json()
         print(f"✅ Đã thêm: {source_data['name']}")

@@ -145,7 +145,7 @@ app.include_router(ai_analysis_endpoints.router, prefix="/api/v1")
 app.include_router(company_endpoints.router, prefix="/api/v1")
 
 # ✅ CẢI THIỆN: Root endpoint
-@app.get("/")
+@app.get("")
 async def root():
     return {
         "message": "Welcome to Stock News Tracker API",
@@ -170,8 +170,8 @@ async def root():
     }
 
 # ✅ SỬA: Health check endpoint support cả GET và HEAD
-@app.get("/health/")
-@app.head("/health/")
+@app.get("/health")
+@app.head("/health")
 async def health_check():
     return {
         "status": "ok", 
@@ -181,7 +181,7 @@ async def health_check():
     }
 
 # ✅ THÊM: CORS test endpoint để debug
-@app.get("/cors-test/")
+@app.get("/cors-test")
 async def cors_test():
     return {
         "message": "CORS is working perfectly!",
