@@ -2,7 +2,8 @@ from sqlalchemy.orm import Session
 from typing import Optional, List
 from app.models import ai_analysis_model as models
 from app.schemas import ai_analysis_schema as schemas
-from app.models.article_model import Article  # Thêm dòng này
+from app.models.article_model import Article  
+from sqlalchemy.orm import Session, contains_eager
 
 def create_ai_analysis(db: Session, analysis: schemas.AIAnalysisCreate) -> models.ArticleAIAnalysis:
     """Tạo AI analysis mới"""
