@@ -14,6 +14,16 @@ class Article(Base):
     content_hash = Column(String, nullable=True, index=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    ai_analysis = relationship(
+        "ArticleAIAnalysis", 
+        back_populates="article", 
+        uselist=False, # Chỉ có một record analysis cho mỗi article
+        cascade="all, delete-orphan"
+    )
+    
+    def __repr__(self):
+        return f"<Article(id={self.id}, title='{self.title[:50]}...')>"
     
     def __repr__(self):
         return f"<Article(id={self.id}, title='{self.title[:50]}...', source='{self.source_url}')>"

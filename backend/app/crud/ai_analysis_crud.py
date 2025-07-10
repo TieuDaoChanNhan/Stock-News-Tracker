@@ -25,18 +25,24 @@ def get_articles_with_ai_analysis(db: Session, skip: int = 0, limit: int = 20) -
         Article.id == models.ArticleAIAnalysis.article_id
     ).offset(skip).limit(limit).all()
 
-def get_articles_by_category(db: Session, category: str) -> List:
-    """Lấy articles theo category AI"""
+def get_articles_by_category(db: Session, category: str) -> List[Article]:
+    """Lấy articles theo category AI và tải kèm analysis"""
     return db.query(Article).join(
-        models.ArticleAIAnalysis
+        Article.ai_analysis
+    ).options(
+        # ✅ SỬA: Tải kèm ai_analysis để có trong response
+        contains_eager(Article.ai_analysis) 
     ).filter(
         models.ArticleAIAnalysis.category == category
     ).all()
 
-def get_high_impact_articles(db: Session, min_impact: float = 0.7) -> List:
-    """Lấy articles có impact cao"""
+def get_high_impact_articles(db: Session, min_impact: float = 0.7) -> List[Article]:
+    """Lấy articles có impact cao và tải kèm analysis"""
     return db.query(Article).join(
-        models.ArticleAIAnalysis
+        Article.ai_analysis
+    ).options(
+        # ✅ SỬA: Tải kèm ai_analysis để có trong response
+        contains_eager(Article.ai_analysis)
     ).filter(
         models.ArticleAIAnalysis.impact_score >= min_impact
     ).all()

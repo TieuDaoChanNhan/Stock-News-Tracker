@@ -89,9 +89,12 @@ def create_article(db: Session, article: schemas.ArticleCreate) -> models.Articl
                 db_ai_analysis.category = full_analysis.get("category")
                 # Chuyển đổi sentiment text sang score số
                 sentiment_map = {"Tích cực": 1.0, "Trung tính": 0.0, "Tiêu cực": -1.0}
+                if db_ai_analysis.sentiment_score == None: db_ai_analysis.sentiment_score = 0.0
                 db_ai_analysis.sentiment_score = sentiment_map.get(full_analysis.get("sentiment"), 0.0)
                 # Chuyển đổi impact text sang score số
                 impact_map = {"Cao": 1.0, "Trung bình": 0.5, "Thấp": 0.1}
+                if db_ai_analysis.impact_score == None: db_ai_analysis.impact_score = 0.0
+                db_ai_analysis.impact_score = 1.0
                 db_ai_analysis.impact_score = impact_map.get(full_analysis.get("impact_level"), 0.1)
                 db_ai_analysis.keywords_extracted = json.dumps(full_analysis.get("key_entities", []), ensure_ascii=False)
                 # Lưu toàn bộ JSON phân tích để tham khảo sau

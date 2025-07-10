@@ -16,7 +16,7 @@ def scrape_news_from_website(
     summary_selector: Optional[str] = None,
     date_selector: Optional[str] = None,
     source_name: str = "Unknown",
-    max_articles: int = 2
+    max_articles: int = 1
 ) -> List[Dict[str, str]]:
     """
     Generic crawler function để crawl từ bất kỳ website nào

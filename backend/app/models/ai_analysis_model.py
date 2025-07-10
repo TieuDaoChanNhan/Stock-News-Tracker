@@ -15,6 +15,7 @@ class ArticleAIAnalysis(Base):
     analysis_metadata = Column(Text, nullable=True)  # JSON string chứa thông tin phân tích
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    article = relationship("Article", back_populates="ai_analysis")
     
     def __repr__(self):
         return f"<ArticleAIAnalysis(article_id={self.article_id}, category='{self.category}')>"

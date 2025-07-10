@@ -82,7 +82,7 @@ def fetch_and_process_all_active_sources():
                 summary_selector=source.get('summary_selector'),
                 date_selector=source.get('date_selector'),
                 source_name=source['name'],
-                max_articles=2
+                max_articles=1
             )
             
             if not scraped_articles:
@@ -182,9 +182,9 @@ def main():
     test_telegram_connection()
         
     # Lập lịch
-    schedule.every(2.4).hours.do(gather_data)
+    schedule.every(3).hours.do(gather_data)
     
-    print("⏰ Scheduler đã khởi động. Lịch: Mỗi 2.4 tiếng.")
+    print("⏰ Scheduler đã khởi động. Lịch: Mỗi 3 tiếng.")
     print("🤖 AI phân tích sẽ được thực hiện tự động trong backend.")
     
     # Chạy ngay lần đầu để test
