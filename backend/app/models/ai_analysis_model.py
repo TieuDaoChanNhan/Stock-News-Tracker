@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime, ForeignKey
 from datetime import datetime
 from app.database import Base
+from sqlalchemy.orm import relationship
 
 class ArticleAIAnalysis(Base):
     __tablename__ = "ai_analysis"
